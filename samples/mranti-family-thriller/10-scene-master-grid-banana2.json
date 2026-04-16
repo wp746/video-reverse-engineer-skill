@@ -1,0 +1,110 @@
+{
+  "project_id": "mranti-family-thriller-001",
+  "project_title": "暂缓探视",
+  "mode": "30-60s-theme",
+  "visual_bible": {
+    "core_style": "写实电影感家庭伦理悬疑空间系统，现实住宅与克制科技元素共存。",
+    "palette": "外景冷灰蓝，室内暖灰黄，整体低饱和。",
+    "lighting_principle": "外部黄昏冷光与室内暖光形成稳定分界，科技设备只用轻微蓝光提示。",
+    "texture_keywords": [
+      "真实郊区住宅",
+      "门外冷风感",
+      "室内温暖但被控制",
+      "克制科技感"
+    ],
+    "continuity_rules": [
+      "所有场景属于同一套住宅和系统环境",
+      "门外门廊与门内客厅要能形成反打关系",
+      "总宫格先建立统一空间气质"
+    ]
+  },
+  "assets": {
+    "characters": [],
+    "scenes": [
+      {
+        "asset_id": "scene-grid-001",
+        "asset_type": "scene_master_grid",
+        "grid_spec": {
+          "format": "3x3",
+          "scene_count": 4,
+          "empty_slots_allowed": true
+        },
+        "scenes": [
+          {
+            "scene_id": "scene-001",
+            "name": "黄昏郊区住宅外立面",
+            "story_function": "建立真实家庭空间",
+            "time_of_day": "黄昏",
+            "space_layout": "独栋住宅正立面、门前车道、门廊、台阶、门旁玻璃侧窗",
+            "lighting": "自然黄昏冷光，局部门廊有轻微暖色环境灯",
+            "palette": "冷灰蓝为主，暖色极少",
+            "atmosphere": "日常、真实、隐约不安",
+            "key_objects": [
+              "白色轿车停靠位",
+              "门廊台阶",
+              "玻璃侧窗"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示北美郊区独栋住宅外立面，黄昏冷灰蓝色调，门前车道和门廊台阶清晰，门旁玻璃侧窗存在感明确，整体真实日常，但隐约有悬疑不安。"
+          },
+          {
+            "scene_id": "scene-002",
+            "name": "门口门廊与门锁区域",
+            "story_function": "建立技术性阻断",
+            "time_of_day": "黄昏偏夜",
+            "space_layout": "门廊狭窄，主门、门锁、门铃、玻璃侧窗都在同一构图区域",
+            "lighting": "黄昏冷光主导，门锁有轻微蓝色状态光",
+            "palette": "冷灰蓝 + 克制蓝光",
+            "atmosphere": "被礼貌拒绝的压迫感",
+            "key_objects": [
+              "智能门锁",
+              "门铃",
+              "玻璃反射"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示门口门廊与智能门锁区域，门锁蓝光是唯一明显的科技信号，门铃和玻璃侧窗清晰可见，画面适合后续门外中近景和门锁特写。"
+          },
+          {
+            "scene_id": "scene-003",
+            "name": "客厅靠门区域",
+            "story_function": "建立门内亲密空间",
+            "time_of_day": "黄昏室内",
+            "space_layout": "门内是简洁中产客厅，靠门处有边桌、台灯和活动区域",
+            "lighting": "室内柔和暖光，靠门一带能接住门外冷光",
+            "palette": "暖灰、浅木、轻微暖黄",
+            "atmosphere": "熟悉、温和、却开始失去主权",
+            "key_objects": [
+              "边桌台灯",
+              "地毯",
+              "门内活动区域"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示客厅靠门区域，空间整洁真实，有轻度中产家庭质感，暖色台灯与门外冷光形成对比，适合后续人物从室内走向门口。"
+          },
+          {
+            "scene_id": "scene-004",
+            "name": "家庭探视权限App界面语境",
+            "story_function": "承担简洁信息揭示",
+            "time_of_day": "手机被点亮时",
+            "space_layout": "白底医疗/家庭管理系统界面，信息层级简洁",
+            "lighting": "屏幕自发光",
+            "palette": "白底、冷灰蓝文字层级、少量警示色",
+            "atmosphere": "合理、专业、无情",
+            "key_objects": [
+              "探视权限：暂缓",
+              "执行方：家庭照护协议"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示家庭探视权限App的整体界面风格，白底、冷灰蓝信息层级，极简但很像真实照护或医疗系统后台，让人感到无情的合理性。"
+          }
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张统一风格的场景总宫格，服务后续关键场景拆分和空间连续性。",
+          "generation_prompt": "一张写实电影感场景总宫格，统一展示《暂缓探视》的核心空间：黄昏郊区住宅外立面、门口门廊与门锁区域、客厅靠门区域、家庭探视权限App界面语境。所有格子风格统一，真实克制，外景冷、内景暖、科技元素轻微而准确，适合后续拆出关键场景多视角板和视频分镜引用。",
+          "consistency_notes": [
+            "所有格子都属于同一项目风格",
+            "住宅外立面、门廊和客厅必须可互相对应",
+            "不要把科技元素做成重科幻设计"
+          ]
+        }
+      }
+    ],
+    "props": []
+  }
+}

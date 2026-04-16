@@ -1,0 +1,51 @@
+{
+  "project_id": "mranti-family-thriller-001",
+  "project_title": "暂缓探视",
+  "mode": "30-60s-theme",
+  "visual_bible": {
+    "core_style": "近现实家庭照护科技产品设计，克制可信。",
+    "palette": "银白金属为主，柔和冷蓝光带。",
+    "lighting_principle": "清楚展示金属、光带和贴腕佩戴关系。",
+    "texture_keywords": [
+      "磨砂金属",
+      "半透明光带",
+      "近未来消费医疗设备",
+      "高端但不夸张"
+    ],
+    "continuity_rules": [
+      "左腕佩戴逻辑明确",
+      "外形和光效在视频中前后一致",
+      "适合被反复特写"
+    ]
+  },
+  "assets": {
+    "characters": [],
+    "scenes": [],
+    "props": [
+      {
+        "asset_id": "prop-001",
+        "asset_type": "prop",
+        "name": "家庭照护手环",
+        "owner": "沈青",
+        "narrative_function": "照护系统权限的实体化象征，也是全片最关键的AI物件",
+        "must_reference_in_seedance": true,
+        "design_core": {
+          "material": "磨砂银白金属主体，搭配柔和半透明光带",
+          "shape_language": "圆润闭合，医疗设备和消费电子的混合体，克制而高端",
+          "scale_impression": "手腕佩戴大小，存在感明显但不会显得笨重",
+          "wear_and_damage": "整体较新，只有轻微贴肤使用感",
+          "era_world_alignment": "近未来但随时可能量产的家庭照护设备"
+        },
+        "banana2_prompt_package": {
+          "system_intent": "生成一个可用于视频近景反复引用的关键道具参考。",
+          "generation_prompt": "一张关键道具设定参考图，展示家庭照护手环的整体结构、佩戴方式、金属质感、柔和光带和贴腕后的真实感觉。它看起来像近未来但非常现实的高端家庭照护设备，不夸张科幻，重点是可信、克制、冷静，同时带一点令人不安的控制意味。",
+          "continuity_notes": [
+            "始终佩戴在左腕",
+            "银白金属和冷蓝光带稳定",
+            "适合近景、手腕特写和门内中景反复识别"
+          ]
+        }
+      }
+    ]
+  }
+}

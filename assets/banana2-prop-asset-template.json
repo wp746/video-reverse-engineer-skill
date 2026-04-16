@@ -1,0 +1,50 @@
+{
+  "project_id": "project-001",
+  "project_title": "项目名",
+  "mode": "1-3min-narrative",
+  "visual_bible": {
+    "core_style": "写实电影道具设定，强调质感、磨损与叙事功能",
+    "palette": "与项目整体风格一致，不做脱离世界观的跳色",
+    "lighting_principle": "清楚展示材质、边缘、磨损和使用痕迹",
+    "texture_keywords": [
+      "材质可信",
+      "边角细节清晰",
+      "适合视频中近景调用"
+    ],
+    "continuity_rules": [
+      "同一道具在不同镜头中保持结构一致",
+      "磨损和标志性细节保持稳定",
+      "适合后续Seedance作为@道具引用"
+    ]
+  },
+  "assets": {
+    "characters": [],
+    "scenes": [],
+    "props": [
+      {
+        "asset_id": "prop-001",
+        "asset_type": "prop",
+        "name": "道具名",
+        "owner": "所属角色或场景",
+        "narrative_function": "反复出现 / 关键剧情触发 / 象征物",
+        "must_reference_in_seedance": true,
+        "design_core": {
+          "material": "皮革、金属、旧木、玻璃等材质及其组合关系",
+          "shape_language": "整体轮廓、边角语言、开合结构、握持方式",
+          "scale_impression": "与手、腰间或桌面相对时的尺寸感",
+          "wear_and_damage": "磨损、划痕、旧化痕迹、使用污渍",
+          "era_world_alignment": "符合项目时代和世界观，不突兀"
+        },
+        "banana2_prompt_package": {
+          "system_intent": "生成一个可用于视频连续引用的关键道具设定参考。",
+          "generation_prompt": "一张关键道具设定参考图，重点展示道具的整体轮廓、材质细节、磨损痕迹和使用感，背景简洁，便于后续视频中稳定识别。道具必须符合项目时代与世界观，具备明确的叙事功能和可重复识别特征。",
+          "continuity_notes": [
+            "外形比例和标志性细节保持稳定",
+            "磨损与旧化位置前后一致",
+            "适合近景或手部互动镜头中持续复用"
+          ]
+        }
+      }
+    ]
+  }
+}

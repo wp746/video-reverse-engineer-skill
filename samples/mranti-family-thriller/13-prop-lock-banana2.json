@@ -1,0 +1,51 @@
+{
+  "project_id": "mranti-family-thriller-001",
+  "project_title": "暂缓探视",
+  "mode": "30-60s-theme",
+  "visual_bible": {
+    "core_style": "真实高端家居智能设备设计，服务家庭空间中的物理阻断感。",
+    "palette": "深灰金属、黑色玻璃、克制蓝光。",
+    "lighting_principle": "门锁状态灯和门面材质都要清楚，适合近景特写。",
+    "texture_keywords": [
+      "高端家居产品",
+      "深灰金属",
+      "黑色玻璃面板",
+      "状态蓝光"
+    ],
+    "continuity_rules": [
+      "门锁造型和状态灯位置稳定",
+      "与住宅门体比例关系稳定",
+      "适合在不同段落反复特写"
+    ]
+  },
+  "assets": {
+    "characters": [],
+    "scenes": [],
+    "props": [
+      {
+        "asset_id": "prop-002",
+        "asset_type": "prop",
+        "name": "智能门锁面板",
+        "owner": "住宅入口",
+        "narrative_function": "把系统权限变成可见可听的物理阻断",
+        "must_reference_in_seedance": true,
+        "design_core": {
+          "material": "深灰金属与黑色玻璃面板结合",
+          "shape_language": "简洁、垂直、真实高端家居智能门锁",
+          "scale_impression": "标准门锁面板大小，固定在主门一侧",
+          "wear_and_damage": "几乎无损，维护良好",
+          "era_world_alignment": "近现实高端家居智能设备"
+        },
+        "banana2_prompt_package": {
+          "system_intent": "生成一个可用于视频近景和中景连续引用的门锁参考。",
+          "generation_prompt": "一张关键道具设定参考图，展示住宅智能门锁面板的整体结构、感应区域、状态灯和安装在家门上的比例关系。设计要像真实高端家居产品，深灰金属和黑色玻璃面板结合，状态蓝光克制但明确，适合在家庭门口场景中反复出现，承担礼貌却无情的拒绝功能。",
+          "continuity_notes": [
+            "蓝光状态灯位置固定",
+            "与门体的安装关系固定",
+            "适合门锁拒绝和反锁瞬间的近景特写"
+          ]
+        }
+      }
+    ]
+  }
+}

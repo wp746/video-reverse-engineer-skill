@@ -1,0 +1,112 @@
+{
+  "project_id": "mranti-family-thriller-001",
+  "project_title": "暂缓探视",
+  "mode": "30-60s-theme",
+  "visual_bible": {
+    "core_style": "写实电影感家庭伦理悬疑短片，母亲形象真实、脆弱、可共情。",
+    "palette": "浅灰白居家体系，暖色室内环境中带轻微苍白感。",
+    "lighting_principle": "脸部柔和但不能磨皮，手环在近景里必须清楚。",
+    "texture_keywords": [
+      "术后恢复感",
+      "居家针织",
+      "温和脆弱",
+      "适合门内中近景和手腕特写"
+    ],
+    "continuity_rules": [
+      "左腕手环始终存在且款式稳定",
+      "面部年龄感不能年轻化",
+      "整体服装必须一直属于恢复期家居状态"
+    ]
+  },
+  "assets": {
+    "characters": [
+      {
+        "asset_id": "char-002",
+        "asset_type": "character",
+        "name": "沈青",
+        "narrative_role": "母亲，承担亲密关系被系统接管后的伦理刺点",
+        "must_reference_in_seedance": true,
+        "sheet_spec": {
+          "aspect_ratio": "16:9",
+          "layout": [
+            "face_closeup",
+            "front_view",
+            "side_view",
+            "back_view",
+            "costume_detail_nine_grid"
+          ]
+        },
+        "identity_core": {
+          "age_feel": "接近六十岁",
+          "gender_presentation": "温和、含蓄、带病后恢复期的脆弱感",
+          "temperament": "清醒但越来越依赖系统判断自己是否安全",
+          "stable_recognition_anchors": [
+            "柔和短发",
+            "偏苍白肤色",
+            "浅色针织家居服",
+            "左腕银白色照护手环"
+          ]
+        },
+        "face_design": {
+          "face_shape": "偏圆的中老年女性脸型，线条温和",
+          "eyes": "眼神有情感，但带迟疑和求证感",
+          "nose": "自然小巧，轮廓柔和",
+          "mouth": "嘴角轻垂时会有委屈和无助感",
+          "skin": "术后恢复期偏苍白，但不是病态夸张",
+          "hair_shape": "整洁短发，轻微内收，自然家常",
+          "hair_color": "深黑里带少量灰丝",
+          "special_marks": [
+            "整体神情像在等待系统许可"
+          ]
+        },
+        "body_design": {
+          "build": "中等身形，略显虚弱",
+          "height_impression": "中等",
+          "posture": "动作慢，站姿略有含胸，靠近门时会有迟疑"
+        },
+        "costume_system": {
+          "outerwear": "无外套，以居家恢复期服装为主",
+          "inner_layers": "浅色针织开衫，内搭简单柔软家居上衣",
+          "lower_garment": "柔软家居长裤",
+          "footwear": "室内拖鞋或柔软家居鞋",
+          "accessories": [
+            "左腕银白色家庭照护手环"
+          ],
+          "material_notes": [
+            "针织和柔软布料有明显居家感",
+            "手环材质是磨砂金属和柔和光带"
+          ],
+          "wear_and_damage": [
+            "衣物干净但有自然穿着褶皱"
+          ]
+        },
+        "costume_detail_nine_grid": [
+          "开衫领口与针织纹理",
+          "肩部垂坠和肩线",
+          "袖口与手腕露出比例",
+          "胸前内搭层次",
+          "左腕手环佩戴结构",
+          "家居长裤材质",
+          "室内鞋轮廓",
+          "手环近景细节",
+          "衣物褶皱与恢复期状态"
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张可用于视频资产引用的16:9角色设定板。",
+          "generation_prompt": "一张16:9电影级角色资产设定板。左侧是沈青的面部特写，展示接近六十岁的真实年龄感、温和却迟疑的眼神、偏苍白肤色和整洁短发；中间是同一角色的全身正面、侧面、背面三视图，穿浅色针织开衫和恢复期家居服，动作姿态略显虚弱，左腕始终佩戴银白色家庭照护手环；右侧是镜头使用导向的服装细节九宫格，重点展示针织领口、肩部垂坠、袖口和手腕比例、胸前层次、手环细节、长裤材质、室内鞋和衣物褶皱。整体真实、克制、适合后续门内中近景和手腕特写稳定引用。",
+          "negative_risk_notes": [
+            "不要画成老年广告片或夸张慈母形象",
+            "不要弱化手环存在感",
+            "不要让年龄感漂移到更年轻"
+          ],
+          "consistency_notes": [
+            "手环始终在左腕",
+            "适合门内靠近玻璃、抬腕请示和近景对视镜头"
+          ]
+        }
+      }
+    ],
+    "scenes": [],
+    "props": []
+  }
+}

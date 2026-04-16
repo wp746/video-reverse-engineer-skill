@@ -1,0 +1,61 @@
+{
+  "project_id": "project-001",
+  "project_title": "项目名",
+  "mode": "30-60s-theme",
+  "visual_bible": {
+    "core_style": "统一电影感场景设计，优先服务后续分镜和视频空间连续性",
+    "palette": "低饱和主色系统，关键情绪点可局部偏色",
+    "lighting_principle": "主光和氛围光逻辑一致，便于跨镜头复用",
+    "texture_keywords": [
+      "空间层次明确",
+      "可持续引用的场景锚点",
+      "多镜头可复用的环境细节"
+    ],
+    "continuity_rules": [
+      "总宫格风格必须统一",
+      "关键场景后续可拆多视角",
+      "空间结构要便于视频中保持连贯"
+    ]
+  },
+  "assets": {
+    "characters": [],
+    "scenes": [
+      {
+        "asset_id": "scene-grid-001",
+        "asset_type": "scene_master_grid",
+        "grid_spec": {
+          "format": "3x3",
+          "scene_count": 6,
+          "empty_slots_allowed": true
+        },
+        "scenes": [
+          {
+            "scene_id": "scene-001",
+            "name": "场景名",
+            "story_function": "建立世界 / 情绪转折 / 决战空间",
+            "time_of_day": "深夜",
+            "space_layout": "狭长石板巷，远处收口，地面湿滑反光，墙体压迫感强",
+            "lighting": "冷蓝主光自上而下，远处一点暖色灯笼补光",
+            "palette": "冷蓝灰主调，暖色只在远处点缀",
+            "atmosphere": "肃杀、潮湿、压迫、宿命感强",
+            "key_objects": [
+              "灯笼",
+              "湿滑石板地",
+              "斑驳墙面"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示深夜狭长石板巷，空间纵深明确，冷蓝主光从上方压下，远处一盏暖色灯笼形成微弱对比，地面湿滑反光，墙体斑驳，氛围压迫而肃杀，构图适合后续夜战或追逐镜头复用。"
+          }
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张统一风格的场景总宫格，用于项目场景资产总览和后续关键场景拆分。",
+          "generation_prompt": "一张影视级场景总宫格，采用统一写实电影感风格。每个格子代表一个不同场景，但整体光影逻辑、色彩体系和材质质感统一。每个格子都要清楚交代空间布局、时间信息、主光源方向、关键物件与情绪氛围，画面便于后续从中拆出关键场景做多视角扩展。",
+          "consistency_notes": [
+            "所有格子必须属于同一项目风格系统",
+            "总宫格先做世界统一，再为关键场景做多视角拆分"
+          ]
+        }
+      }
+    ],
+    "props": []
+  }
+}

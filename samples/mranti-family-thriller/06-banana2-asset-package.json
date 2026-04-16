@@ -1,0 +1,386 @@
+{
+  "project_id": "mranti-family-thriller-001",
+  "project_title": "暂缓探视",
+  "mode": "30-60s-theme",
+  "visual_bible": {
+    "core_style": "写实电影感家庭伦理悬疑短片，北美郊区真实空间，现实主义镜头语法，科技控制感隐藏在生活细节里。",
+    "palette": "黄昏冷灰蓝外景，室内局部暖黄光，整体低饱和，带轻微病态冷感。",
+    "lighting_principle": "门外是自然冷光和门廊环境光，门内是克制暖光，形成内外情感隔断；所有设备光效以克制蓝光为主。",
+    "texture_keywords": [
+      "真实郊区住宅",
+      "克制科技感",
+      "玻璃反射",
+      "金属手环冷光",
+      "门锁蓝色状态灯"
+    ],
+    "continuity_rules": [
+      "人物脸部结构与发型全片稳定",
+      "沈青腕上的手环必须前后一致",
+      "门外门廊、玻璃门、门内客厅空间关系固定",
+      "门锁蓝光和手环光效属于同一系统语言"
+    ]
+  },
+  "assets": {
+    "characters": [
+      {
+        "asset_id": "char-001",
+        "asset_type": "character",
+        "name": "林岚",
+        "narrative_role": "在外地工作的女儿，情绪克制但在母亲问题上快速破防",
+        "must_reference_in_seedance": true,
+        "sheet_spec": {
+          "aspect_ratio": "16:9",
+          "layout": [
+            "face_closeup",
+            "front_view",
+            "side_view",
+            "back_view",
+            "costume_detail_nine_grid"
+          ]
+        },
+        "identity_core": {
+          "age_feel": "三十岁出头",
+          "gender_presentation": "都市职业女性，干练但疲惫",
+          "temperament": "控制力强、压着情绪、遇到家人问题会突然锋利起来",
+          "stable_recognition_anchors": [
+            "利落短发",
+            "清瘦脸型",
+            "深色长外套",
+            "通勤风高领内搭"
+          ]
+        },
+        "face_design": {
+          "face_shape": "偏瘦长脸，下颌线清晰，脸部骨相偏硬",
+          "eyes": "眼神敏感，疲惫里带警惕，情绪上来时眼眶会迅速发红",
+          "nose": "鼻梁直，鼻型偏利落",
+          "mouth": "嘴唇薄，平时抿得很紧",
+          "skin": "自然偏冷白肤色，通勤状态下略显倦意",
+          "hair_shape": "黑色利落短发，长度到下巴附近，发尾微内扣",
+          "hair_color": "自然黑色",
+          "special_marks": [
+            "右眼下有很淡的疲惫阴影"
+          ]
+        },
+        "body_design": {
+          "build": "清瘦，带轻微紧绷感",
+          "height_impression": "中等偏高",
+          "posture": "站立时肩颈有压着情绪的紧张感，走路很快"
+        },
+        "costume_system": {
+          "outerwear": "深灰或黑色长款通勤外套，线条利落，材质偏挺",
+          "inner_layers": "高领或半高领深色针织内搭，简洁无装饰",
+          "lower_garment": "深色直筒长裤，通勤风",
+          "footwear": "低调深色短靴或简洁通勤鞋",
+          "accessories": [
+            "简单通勤包",
+            "无明显夸张首饰"
+          ],
+          "material_notes": [
+            "毛呢或挺括混纺外套",
+            "针织内搭略有细密纹理"
+          ],
+          "wear_and_damage": [
+            "整体整洁，但有连续奔波后的轻微褶皱"
+          ]
+        },
+        "costume_detail_nine_grid": [
+          "外套领口结构",
+          "肩线和外套轮廓",
+          "高领内搭贴颈细节",
+          "胸前层次和衣襟开合",
+          "袖口和手部露出比例",
+          "裤装材质与裤线",
+          "鞋子轮廓和鞋口",
+          "通勤包局部近景",
+          "外套褶皱和使用痕迹"
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张用于后续视频制作的16:9角色资产设定板，强调角色一致性和通勤风冷感。",
+          "generation_prompt": "一张16:9电影级角色资产设定板，左侧是林岚的面部特写，清楚展示她清瘦利落的脸型、疲惫但敏感的眼神、黑色利落短发和压着情绪的表情；中间展示同一角色的全身正面、侧面、背面三视图，穿深灰黑色长款通勤外套、深色高领内搭、深色直筒长裤和简洁深色鞋，整体干练克制；右侧是镜头使用导向的服装细节九宫格，重点展示领口、肩线、内搭贴颈细节、衣襟层次、袖口、裤装材质、鞋轮廓、通勤包和衣物轻微褶皱。背景干净专业，适合后续视频中稳定引用。",
+          "negative_risk_notes": [
+            "不要画成时尚大片或夸张职场广告风",
+            "不要把三视图画成三个不同人",
+            "不要增加与角色身份不符的夸张饰品"
+          ],
+          "consistency_notes": [
+            "角色气质必须始终压着情绪",
+            "适合后续中近景和门外对峙镜头引用"
+          ]
+        }
+      },
+      {
+        "asset_id": "char-002",
+        "asset_type": "character",
+        "name": "沈青",
+        "narrative_role": "术后恢复中的母亲，意识清醒但正在把判断权让渡给系统",
+        "must_reference_in_seedance": true,
+        "sheet_spec": {
+          "aspect_ratio": "16:9",
+          "layout": [
+            "face_closeup",
+            "front_view",
+            "side_view",
+            "back_view",
+            "costume_detail_nine_grid"
+          ]
+        },
+        "identity_core": {
+          "age_feel": "接近六十岁",
+          "gender_presentation": "温和、脆弱，但并不糊涂",
+          "temperament": "有内在情感波动，却习惯把决定权交给外部系统",
+          "stable_recognition_anchors": [
+            "温和短发",
+            "苍白脸色",
+            "浅色家居针织衫",
+            "左腕银白色照护手环"
+          ]
+        },
+        "face_design": {
+          "face_shape": "偏圆的中老年女性脸型，面部线条柔和",
+          "eyes": "眼神温和，但有不确定和轻微依赖感",
+          "nose": "自然小巧偏柔和",
+          "mouth": "嘴角下压时有轻微委屈感",
+          "skin": "术后恢复期的偏苍白肤色",
+          "hair_shape": "整洁短发，微卷或自然内收",
+          "hair_color": "深黑中带少量灰丝",
+          "special_marks": [
+            "神情有轻微脆弱感"
+          ]
+        },
+        "body_design": {
+          "build": "中等身形，略显虚弱",
+          "height_impression": "中等",
+          "posture": "站立不稳时会略向前含胸，动作慢"
+        },
+        "costume_system": {
+          "outerwear": "无外套，以家居恢复期穿着为主",
+          "inner_layers": "浅米色或灰白色针织开衫，内搭简单家居上衣",
+          "lower_garment": "柔软舒适的家居长裤",
+          "footwear": "柔软室内拖鞋",
+          "accessories": [
+            "左腕银白色家庭照护手环"
+          ],
+          "material_notes": [
+            "针织柔软，带恢复期居家感",
+            "手环为磨砂金属和柔和光带结合"
+          ],
+          "wear_and_damage": [
+            "衣物干净，但有长时间居家穿着后的自然褶皱"
+          ]
+        },
+        "costume_detail_nine_grid": [
+          "开衫领口与针织纹理",
+          "肩部垂坠感",
+          "袖口和手腕露出比例",
+          "胸前内搭层次",
+          "手环佩戴位置与结构",
+          "裤装柔软材质",
+          "室内鞋轮廓",
+          "手环近景细节",
+          "家居服自然褶皱"
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张用于后续视频制作的16:9角色资产设定板，强调脆弱感与手环绑定关系。",
+          "generation_prompt": "一张16:9电影级角色资产设定板，左侧是沈青的面部特写，清楚展示她苍白、温和、略带迟疑和依赖感的神情；中间是全身正面、侧面、背面三视图，穿浅色针织开衫和家居恢复期服装，动作和姿态偏慢偏弱；右侧是镜头使用导向的服装细节九宫格，重点展示针织领口、肩部垂坠、袖口与手腕、胸前层次、左腕银白色家庭照护手环、柔软裤装、室内鞋和衣物褶皱。整体为真实家庭伦理悬疑片人物设定板，突出她与手环的绑定关系。",
+          "negative_risk_notes": [
+            "不要画成年轻化角色",
+            "不要把她画成失智夸张表演状态",
+            "不要让手环样式在细节图中变化"
+          ],
+          "consistency_notes": [
+            "手环必须始终在左腕",
+            "适合后续门内靠近玻璃的中近景和手腕特写"
+          ]
+        }
+      }
+    ],
+    "scenes": [
+      {
+        "asset_id": "scene-grid-001",
+        "asset_type": "scene_master_grid",
+        "grid_spec": {
+          "format": "3x3",
+          "scene_count": 4,
+          "empty_slots_allowed": true
+        },
+        "scenes": [
+          {
+            "scene_id": "scene-001",
+            "name": "黄昏郊区住宅外立面",
+            "story_function": "建立家庭空间与现实感外壳",
+            "time_of_day": "黄昏",
+            "space_layout": "独栋住宅正立面，车道通向门廊，门前有几级台阶，门旁带玻璃侧窗",
+            "lighting": "自然黄昏冷光，门廊局部有轻微暖色环境灯",
+            "palette": "冷灰蓝外景，暖光仅作点缀",
+            "atmosphere": "安静、正常、但隐约不安",
+            "key_objects": [
+              "白色轿车",
+              "门廊",
+              "门旁玻璃侧窗"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示北美郊区独栋住宅的外立面，黄昏冷色自然光，门廊和车道清楚可见，白色轿车停靠能成立，整体真实克制，表面平静但有轻微不安感。"
+          },
+          {
+            "scene_id": "scene-002",
+            "name": "门口门廊与智能门锁区域",
+            "story_function": "建立阻隔与技术控制",
+            "time_of_day": "黄昏偏夜",
+            "space_layout": "门廊空间较窄，门锁位于主门右侧，玻璃侧窗可见室内轮廓",
+            "lighting": "外部冷光，门锁发出克制蓝光",
+            "palette": "冷灰蓝 + 微弱蓝光",
+            "atmosphere": "被系统拒绝的压迫感",
+            "key_objects": [
+              "门锁面板",
+              "门铃",
+              "玻璃侧窗"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示住宅门口门廊与智能门锁区域，空间克制现实，门锁蓝光是唯一明显科技元素，玻璃侧窗能透出一点室内暖光和模糊人影。"
+          },
+          {
+            "scene_id": "scene-003",
+            "name": "客厅靠门区域",
+            "story_function": "建立门内的亲密空间和被隔断的情感",
+            "time_of_day": "黄昏室内",
+            "space_layout": "门内是简洁中产客厅，靠门有边桌或台灯，人物从室内走向门口",
+            "lighting": "室内暖色台灯或环境灯，形成与门外冷光对比",
+            "palette": "暖灰、浅木色、局部暖黄",
+            "atmosphere": "熟悉、温和、却被控制",
+            "key_objects": [
+              "边桌台灯",
+              "客厅地毯",
+              "靠门区域"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示住宅客厅靠门区域，空间温和熟悉，有中产家庭感，暖色台灯与门外冷色形成明显反差，人物从这里走向门口会成立。"
+          },
+          {
+            "scene_id": "scene-004",
+            "name": "家庭探视权限 App 界面语境",
+            "story_function": "作为信息揭示点的界面场景参考",
+            "time_of_day": "随角色手持手机时",
+            "space_layout": "手机界面为简洁医疗/家庭管理系统风格",
+            "lighting": "屏幕自发光",
+            "palette": "白底冷灰蓝信息层级",
+            "atmosphere": "无情、简洁、像合理流程",
+            "key_objects": [
+              "探视权限状态字样",
+              "执行方说明"
+            ],
+            "banana2_cell_prompt": "总宫格中的一个格子，展示简洁克制的家庭照护权限App界面风格，信息层级清楚，白底冷灰蓝系统风，传达医疗流程般的无情合理性。"
+          }
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张统一风格的场景总宫格，用于项目场景总览和关键场景拆分。",
+          "generation_prompt": "一张写实电影感场景总宫格，展示《暂缓探视》的核心空间：黄昏郊区住宅外立面、门口门廊与智能门锁区域、客厅靠门区域，以及家庭探视权限App界面语境。所有格子属于同一项目风格，外景冷灰蓝、内景暖黄克制，整体真实而带悬疑压迫感，便于后续拆出关键场景多视角资产。",
+          "consistency_notes": [
+            "外景和内景要属于同一个房子",
+            "空间关系应支持后续门内外反打",
+            "科技元素必须克制，不做科幻片夸张处理"
+          ]
+        }
+      },
+      {
+        "asset_id": "scene-key-001",
+        "asset_type": "scene_multi_angle",
+        "name": "门口门廊与隔玻璃对视空间",
+        "must_reference_in_seedance": true,
+        "angles": [
+          {
+            "angle_id": "hero",
+            "purpose": "门外视角建立，展示林岚冲到门前和门锁拒绝",
+            "space_layout": "从门廊外侧看向门、门锁和玻璃侧窗，人物能占据前景",
+            "lighting": "黄昏冷色外光，门锁蓝光清楚可见",
+            "key_objects": [
+              "门锁",
+              "门铃",
+              "玻璃侧窗"
+            ],
+            "banana2_angle_prompt": "门口门廊的主视角，适合展示林岚冲上门前、门锁亮起蓝光但拒绝开门的情境。画面要清楚看到门、门锁和玻璃侧窗，黄昏冷光真实克制，空间适合后续近景和中景切换。"
+          },
+          {
+            "angle_id": "side",
+            "purpose": "侧向展示门外人物与门内玻璃反射关系",
+            "space_layout": "从门廊侧向观察，能同时看到人物贴近玻璃和门内模糊轮廓",
+            "lighting": "冷外光与室内暖光交界清楚",
+            "key_objects": [
+              "玻璃反射",
+              "门框",
+              "门内模糊人影"
+            ],
+            "banana2_angle_prompt": "门口门廊的侧向视角，重点展示人物贴近玻璃侧窗时的压迫感，以及门外冷光和室内暖光的交界。画面应支持后续母女隔玻璃对视镜头。"
+          },
+          {
+            "angle_id": "reverse",
+            "purpose": "从门内向外反打，建立沈青看向林岚的空间关系",
+            "space_layout": "从客厅靠门区域反打门口，门外人物和玻璃的关系清楚",
+            "lighting": "室内暖光主导，但门外冷光形成边缘反差",
+            "key_objects": [
+              "门内地面",
+              "玻璃透出的门外人物",
+              "门锁位置"
+            ],
+            "banana2_angle_prompt": "从门内客厅靠门区域反打门口，画面能看到门外人物透过玻璃出现，建立母亲从室内看向门外女儿的视角。室内暖光和门外冷光反差明确，空间结构稳定。"
+          }
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一个用于门内外对视连续性的关键场景多视角资产板。",
+          "generation_prompt": "一张关键场景多视角资产板，围绕住宅门口门廊与隔玻璃对视空间展开，包含门外主视角、门廊侧向视角和门内反打视角。三个视角必须属于同一个真实空间，门、门锁、玻璃侧窗、门内外光线关系和人物站位逻辑保持一致，适合后续视频中门内外对视、门锁拒绝和情绪逼近的连续镜头使用。",
+          "continuity_notes": [
+            "三视角空间必须完全对应",
+            "门锁和玻璃位置不可漂移",
+            "适合后续SEG01-SEG04持续引用"
+          ]
+        }
+      }
+    ],
+    "props": [
+      {
+        "asset_id": "prop-001",
+        "asset_type": "prop",
+        "name": "家庭照护手环",
+        "owner": "沈青",
+        "narrative_function": "核心 AI 权限载体，负责照护监测和探视判断，是亲密关系被技术接管的实体化象征",
+        "must_reference_in_seedance": true,
+        "design_core": {
+          "material": "磨砂银白金属主体，搭配柔和半透明光带，科技感克制但高级",
+          "shape_language": "圆润但封闭，像医疗设备和消费电子的混合体",
+          "scale_impression": "贴腕佩戴，存在感明显但不过分笨重",
+          "wear_and_damage": "整体较新，带长期佩戴后的轻微皮肤贴合感",
+          "era_world_alignment": "近未来但几乎就是明天会量产的消费级医疗穿戴设备"
+        },
+        "banana2_prompt_package": {
+          "system_intent": "生成一个可用于视频连续引用的核心关键道具参考。",
+          "generation_prompt": "一张关键道具设定参考图，展示家庭照护手环的整体结构、佩戴方式、金属材质、柔和光带和靠近皮肤时的真实感觉。它必须看起来像近未来但立刻能进入普通家庭的高端照护设备，不夸张科幻，重点是高级、克制、可信，同时带一点令人不安的控制感。",
+          "continuity_notes": [
+            "始终佩戴在左腕",
+            "金属颜色和光带位置保持一致",
+            "适合手腕近景和中景中反复识别"
+          ]
+        }
+      },
+      {
+        "asset_id": "prop-002",
+        "asset_type": "prop",
+        "name": "智能门锁面板",
+        "owner": "住宅入口",
+        "narrative_function": "把抽象的权限管理变成可见的物理阻断",
+        "must_reference_in_seedance": true,
+        "design_core": {
+          "material": "深灰金属与黑色玻璃面板组合",
+          "shape_language": "简洁、垂直、家用高端智能门锁设计",
+          "scale_impression": "标准门锁面板大小，贴在住宅主门侧",
+          "wear_and_damage": "使用痕迹极少，维护良好",
+          "era_world_alignment": "近现实高端家居智能设备"
+        },
+        "banana2_prompt_package": {
+          "system_intent": "生成一个可用于视频连续引用的门锁设定参考。",
+          "generation_prompt": "一张关键道具设定参考图，展示住宅智能门锁面板的整体轮廓、按键或感应区域、状态灯和门边安装关系。设计风格要像真实高端家居产品，深灰金属与黑色玻璃结合，状态蓝光克制而明确，适合作为后续视频中反复出现的阻断符号。",
+          "continuity_notes": [
+            "蓝光状态灯位置保持一致",
+            "门锁与门框安装关系稳定",
+            "适合近景特写和门口中景中重复出现"
+          ]
+        }
+      }
+    ]
+  }
+}

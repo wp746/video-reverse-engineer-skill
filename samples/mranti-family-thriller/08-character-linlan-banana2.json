@@ -1,0 +1,112 @@
+{
+  "project_id": "mranti-family-thriller-001",
+  "project_title": "暂缓探视",
+  "mode": "30-60s-theme",
+  "visual_bible": {
+    "core_style": "写实电影感家庭伦理悬疑短片，人物设计克制真实，适配后续Seedance引用。",
+    "palette": "深灰黑通勤体系，低饱和，贴近黄昏冷光环境。",
+    "lighting_principle": "面部结构要在冷光和室内混合光下都能稳定识别。",
+    "texture_keywords": [
+      "通勤风",
+      "克制职业感",
+      "真实面部骨相",
+      "适合近景和中近景持续复用"
+    ],
+    "continuity_rules": [
+      "发型、脸型、外套轮廓稳定",
+      "不变成时尚广告女主",
+      "适合连续多段视频保持一致"
+    ]
+  },
+  "assets": {
+    "characters": [
+      {
+        "asset_id": "char-001",
+        "asset_type": "character",
+        "name": "林岚",
+        "narrative_role": "女儿，负责把私人情绪和外部系统控制碰撞出来",
+        "must_reference_in_seedance": true,
+        "sheet_spec": {
+          "aspect_ratio": "16:9",
+          "layout": [
+            "face_closeup",
+            "front_view",
+            "side_view",
+            "back_view",
+            "costume_detail_nine_grid"
+          ]
+        },
+        "identity_core": {
+          "age_feel": "三十岁出头",
+          "gender_presentation": "干练、克制、现实都市职业女性",
+          "temperament": "情绪压得很深，越到后面越接近崩裂",
+          "stable_recognition_anchors": [
+            "清瘦偏长脸",
+            "黑色利落短发",
+            "深色长款通勤外套",
+            "高领深色内搭"
+          ]
+        },
+        "face_design": {
+          "face_shape": "偏瘦长脸，下颌线清晰，骨相利落",
+          "eyes": "敏感、警惕、疲惫里带倔强，情绪上来时眼眶容易发红",
+          "nose": "鼻梁直，鼻型利落自然",
+          "mouth": "唇薄，嘴角常年收紧",
+          "skin": "自然偏冷白肤色，带一点长期通勤和睡眠不足的倦意",
+          "hair_shape": "黑色下巴长度短发，发尾轻微内扣，整体整洁",
+          "hair_color": "自然黑色",
+          "special_marks": [
+            "眼下有轻微疲惫阴影"
+          ]
+        },
+        "body_design": {
+          "build": "清瘦但有紧绷感",
+          "height_impression": "中等偏高",
+          "posture": "平时收着肩背，急起来时整个人会前倾"
+        },
+        "costume_system": {
+          "outerwear": "深灰黑长款通勤外套，线条利落，长度过胯，材质偏挺",
+          "inner_layers": "深色高领或半高领针织内搭，无夸张装饰",
+          "lower_garment": "深色直筒长裤，通勤风",
+          "footwear": "简洁深色短靴或低调通勤鞋",
+          "accessories": [
+            "低调通勤包"
+          ],
+          "material_notes": [
+            "外套有挺括质感",
+            "针织内搭纹理细密"
+          ],
+          "wear_and_damage": [
+            "只有连续奔波产生的轻微褶皱"
+          ]
+        },
+        "costume_detail_nine_grid": [
+          "外套领口结构",
+          "肩线轮廓",
+          "高领贴颈细节",
+          "胸前衣襟层次",
+          "袖口与手部露出比例",
+          "裤装材质与裤线",
+          "鞋型轮廓",
+          "通勤包局部近景",
+          "衣物自然褶皱和使用痕迹"
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张可用于视频资产引用的16:9角色设定板。",
+          "generation_prompt": "一张16:9电影级角色资产设定板。左侧是林岚的面部特写，清楚展示她清瘦偏长的脸型、利落下颌线、疲惫却敏感的眼神、黑色下巴长度短发和压着情绪的状态；中间展示同一角色的全身正面、侧面、背面三视图，穿深灰黑长款通勤外套、深色高领内搭、深色直筒长裤和简洁深色鞋，整体冷静克制；右侧展示镜头使用导向的服装细节九宫格，优先呈现领口、肩线、高领贴颈、衣襟层次、袖口、裤装材质、鞋型、通勤包和衣物褶皱。背景干净专业，适合后续视频中稳定引用。",
+          "negative_risk_notes": [
+            "不要画成时尚大片风",
+            "不要把她做得过于明星脸",
+            "不要加入夸张首饰或不必要的潮流元素"
+          ],
+          "consistency_notes": [
+            "面部骨相和短发必须稳定",
+            "适合门外中近景、对视近景、车内近景连续使用"
+          ]
+        }
+      }
+    ],
+    "scenes": [],
+    "props": []
+  }
+}

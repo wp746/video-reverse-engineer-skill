@@ -1,0 +1,5 @@
+interface:
+  display_name: "Video Reverse Engineer"
+  short_description: "Reverse-engineer videos into AI production workflows"
+  default_prompt: "Use $video-reverse-engineer to dissect this short film, propose 3 derivative directions, and build a reviewed script plus Seedance package."
+  brand_color: "#1F6FEB"

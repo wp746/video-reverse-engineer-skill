@@ -1,0 +1,114 @@
+{
+  "project_id": "project-001",
+  "project_title": "项目名",
+  "mode": "15s-emotion",
+  "visual_bible": {
+    "core_style": "电影感写实短片，风格统一，适合后续视频资产引用",
+    "palette": "冷灰蓝基调，局部暖色点缀",
+    "lighting_principle": "主光方向稳定，强调人物面部结构与服装材质",
+    "texture_keywords": [
+      "潮湿质感",
+      "低饱和写实",
+      "可用于视频连续生成的稳定细节"
+    ],
+    "continuity_rules": [
+      "人物脸部结构保持稳定",
+      "服装层次和主配饰保持稳定",
+      "所有视图必须属于同一角色而非变体"
+    ]
+  },
+  "assets": {
+    "characters": [
+      {
+        "asset_id": "char-001",
+        "asset_type": "character",
+        "name": "角色名",
+        "narrative_role": "主角 / 配角 / 反派 / 叙事视角承担者",
+        "must_reference_in_seedance": true,
+        "sheet_spec": {
+          "aspect_ratio": "16:9",
+          "layout": [
+            "face_closeup",
+            "front_view",
+            "side_view",
+            "back_view",
+            "costume_detail_nine_grid"
+          ]
+        },
+        "identity_core": {
+          "age_feel": "二十岁上下",
+          "gender_presentation": "女性气质，坚韧、克制",
+          "temperament": "冷静、敏锐、疲惫中带锋利感",
+          "stable_recognition_anchors": [
+            "偏窄脸型",
+            "左眉尾浅伤痕",
+            "黑色长发半束起",
+            "深色轻甲外搭暗红内衬"
+          ]
+        },
+        "face_design": {
+          "face_shape": "偏窄鹅蛋脸，颧骨略明显，下颌线利落",
+          "eyes": "眼型细长，目光警惕，眼神偏冷",
+          "nose": "鼻梁直，鼻尖干净利落",
+          "mouth": "唇线清晰，嘴角常年紧绷",
+          "skin": "偏冷白肤色，长期风吹雨打但仍细致",
+          "hair_shape": "长发半束起，额前有碎发贴脸",
+          "hair_color": "自然黑色",
+          "special_marks": [
+            "左眉尾一条淡伤痕"
+          ]
+        },
+        "body_design": {
+          "build": "纤细但有力量感",
+          "height_impression": "中等偏高",
+          "posture": "站姿收紧，重心稳定，随时可进入动作状态"
+        },
+        "costume_system": {
+          "outerwear": "深灰黑轻甲短外搭，肩部有简洁护片",
+          "inner_layers": "暗红内衬，领口和胸前层次清晰",
+          "lower_garment": "深色便于行动的长裤，材质略有磨损",
+          "footwear": "深色软底长靴，便于夜间行走",
+          "accessories": [
+            "腰侧佩剑",
+            "细窄腰封"
+          ],
+          "material_notes": [
+            "皮革与粗布混合",
+            "局部金属件低调反光"
+          ],
+          "wear_and_damage": [
+            "袖口有轻微磨损",
+            "下摆有雨夜泥点痕迹"
+          ]
+        },
+        "costume_detail_nine_grid": [
+          "领口结构与内衬层次",
+          "肩部护片轮廓",
+          "袖口收束和磨损细节",
+          "胸前层叠结构",
+          "腰封与佩剑固定方式",
+          "裤装材质纹理",
+          "靴子外形和鞋口结构",
+          "主配饰近景细节",
+          "标志性磨损/花纹/雨痕"
+        ],
+        "banana2_prompt_package": {
+          "system_intent": "生成一张用于后续视频制作的16:9角色资产设定板，强调角色一致性和镜头可用性。",
+          "generation_prompt": "一张16:9电影级角色资产设定板，画面左侧是人物面部特写，清晰展示脸型、五官、肤色、发型与伤痕；中间区域展示同一角色的全身正面、侧面、背面三视图，服装层次、剪裁、轮廓、鞋型完全统一；右侧为镜头使用导向的服装细节九宫格，优先展示领口、肩部、袖口、胸前层次、腰封、下装材质、鞋子、主配饰与标志性磨损细节。整体为干净专业的影视角色设定板，背景简洁可控，强调写实质感、材质可信度和后续视频生成的一致性。",
+          "negative_risk_notes": [
+            "不要把三视图画成三个不同人物",
+            "不要让服装九宫格偏离主视图服装设计",
+            "不要使用花哨背景干扰资产识别"
+          ],
+          "consistency_notes": [
+            "面部特写与三视图必须为同一角色",
+            "所有服装细节必须能回扣到主服装系统",
+            "适合后续Seedance通过@角色引用"
+          ]
+        }
+      }
+    ],
+    "scenes": [],
+    "props": []
+  }
+}
