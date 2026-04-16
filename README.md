@@ -13,6 +13,27 @@
 
 适合 15 秒情绪短片、30-60 秒主题短片、1-3 分钟叙事短片。
 
+## Quick Start
+
+如果你现在就要把这个 skill 交给 OpenClaw 或 Hermes，用下面这组信息就够了。
+
+安装仓库地址：
+
+`https://github.com/wp746/video-reverse-engineer-skill.git`
+
+技能入口地址：
+
+`https://raw.githubusercontent.com/wp746/video-reverse-engineer-skill/main/SKILL.md`
+
+压缩包地址：
+
+`https://github.com/wp746/video-reverse-engineer-skill/archive/refs/heads/main.zip`
+
+推荐先看：
+
+- [OpenClaw / Hermes 安装与调用模板](docs/openclaw-hermes-install.md)
+- [SKILL.md](SKILL.md)
+
 ## 它能解决什么问题
 
 这个 skill 主要解决 6 类高频问题：
@@ -153,6 +174,10 @@ https://raw.githubusercontent.com/wp746/video-reverse-engineer-skill/main/SKILL.
 ```
 
 如果它们支持“先导入仓库，再读取根目录 skill”，这个仓库本身已经是 skill 根目录，不需要再额外指定子路径。
+
+更完整的安装与调用模板见：
+
+- [docs/openclaw-hermes-install.md](docs/openclaw-hermes-install.md)
 
 ## 怎么使用
 
