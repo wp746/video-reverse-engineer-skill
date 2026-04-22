@@ -83,8 +83,10 @@ Read:
 - [banana2-asset-json-spec.md](references/banana2-asset-json-spec.md) for industrial Banana 2 asset packaging
 - [producer-handoff.md](references/producer-handoff.md) for post-review producer breakdown and downstream package planning
 - [seedance-package-spec.md](references/seedance-package-spec.md) for Seedance output structure
+- [seedance-prompt-craft-notes.md](references/seedance-prompt-craft-notes.md) for Seedance prompt writing techniques extracted from 2201+ real-world cases (awesomevideoprompts.com)
+- [cinematography-design-guide.md](references/cinematography-design-guide.md) for 38-type professional cinematography technique matching framework (NEW v2.0)
 - [video-input-ingestion.md](references/video-input-ingestion.md) for multi-platform link ingestion
-- [review-prompts/](references/review-prompts/) for hidden expert-review prompts, starting with chief director and screenwriter
+- [review-prompts/](references/review-prompts/) for hidden expert-review prompts, including cinematography-review (UPGRADED v2.0 with camera arc analysis + mirror symmetry check)
 
 ## Stage 1: Reverse engineering
 
@@ -269,10 +271,53 @@ When possible, deliver outputs in this order:
 7. storyboard timeline
 8. Seedance 2.0 package
 
+## Seedance 2.0 Prompt — Autonomous Trigger Rule
+
+**This rule applies globally**, not only within the 8-stage pipeline.
+
+### Trigger conditions
+
+Whenever the user's request involves ANY of the following, autonomously apply Seedance 2.0 prompt expertise:
+
+1. **Explicit request**: User directly asks for Seedance / AI video prompts
+2. **Vague creative idea**: User describes a scene, mood, story fragment, visual concept, or "I have an idea..." — proactively craft a production-ready Seedance 2.0 prompt from it
+3. **Video production context**: User is working on a short film, ad, social media video, or any video content that could use AI generation
+4. **Prompt improvement**: User shares an existing prompt and wants it better — rewrite it using the craft notes
+
+### Mandatory knowledge source
+
+Always base all Seedance 2.0 prompt output on:
+- [seedance-prompt-craft-notes.md](references/seedance-prompt-craft-notes.md) — 2201+ case-extracted techniques
+
+Do NOT improvise Seedance prompts without consulting this file.
+
+### Quality standard
+
+Every Seedance 2.0 prompt must include:
+- **Format declaration** (duration, shot count, aspect ratio)
+- **Time-axis segmentation** (second-level or segment-level, following the ≤15s rule)
+- **Explicit camera movement** per shot (specific cinematography terms, not vague descriptions)
+- **Physical constraints** (grounded physics, character count limits, etc.)
+- **Multi-sensory layers** (visual + sound hints + physical feedback)
+- **Technical tags** (resolution, framerate, color grading)
+- **Style anchoring** (reference specific works/studios when applicable)
+- **Verb-driven action description** (strong verbs, not static adjectives)
+
+### One-click delivery for vague ideas
+
+When the user gives a vague idea like "我想要一个下雨天武士的镜头" or "帮我写个赛博朋克跑步的", do NOT ask clarifying questions — directly deliver:
+1. A production-ready Seedance 2.0 prompt (following all quality standards above)
+2. Optionally 2-3 creative variations (different mood / camera / style) so the user can pick
+
+### Output language
+
+- Prompt text itself: **English** (Seedance 2.0 performs best with English prompts)
+- Explanations and context: **Chinese** (match user's communication language)
+
 ## Important constraints
 
 - Do not let surface aesthetics replace theme analysis
-- Do not jump into prompt writing before script review passes
-- Do not generate asset prompts before producer breakdown
+- Do not jump into prompt writing before script review passes (within the 8-stage pipeline)
+- Do not generate asset prompts before producer breakdown (within the 8-stage pipeline)
 - Do not treat Seedance output as a one-paragraph task when assets and shot timing matter
 - Do not directly copy the reference video's literal characters, scenes, or lines unless the user explicitly wants a close remake
