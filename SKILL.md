@@ -79,11 +79,13 @@ Read:
 
 - [analysis-framework.md](references/analysis-framework.md) for reverse-engineering structure
 - [script-review-order.md](references/script-review-order.md) for review order and pass gates
+- [script-template.md](references/script-template.md) for Stage 3 script writing template (v2.0 NEW)
+- [storyboard-timeline-template.md](references/storyboard-timeline-template.md) for Stage 7 storyboard timeline template (v2.0 NEW)
 - [asset-package-spec.md](references/asset-package-spec.md) for asset extraction rules
 - [banana2-asset-json-spec.md](references/banana2-asset-json-spec.md) for industrial Banana 2 asset packaging
 - [producer-handoff.md](references/producer-handoff.md) for post-review producer breakdown and downstream package planning
 - [seedance-package-spec.md](references/seedance-package-spec.md) for Seedance output structure
-- [seedance-prompt-craft-notes.md](references/seedance-prompt-craft-notes.md) for Seedance prompt writing techniques extracted from 2201+ real-world cases (awesomevideoprompts.com)
+- [seedance-prompt-craft-notes.md](references/seedance-prompt-craft-notes.md) for Seedance prompt writing techniques extracted from 2201+ real-world cases (awesomevideoprompts.com, UPGRADED v2.0 with 36 camera techniques)
 - [cinematography-design-guide.md](references/cinematography-design-guide.md) for 38-type professional cinematography technique matching framework (NEW v2.0)
 - [video-input-ingestion.md](references/video-input-ingestion.md) for multi-platform link ingestion
 - [review-prompts/](references/review-prompts/) for hidden expert-review prompts, including cinematography-review (UPGRADED v2.0 with camera arc analysis + mirror symmetry check)
@@ -240,8 +242,8 @@ The default package should include:
 
 Useful starter templates live in:
 
-- [seedance-segment-template.md](assets/seedance-segment-template.md)
-- [seedance-package-output-template.md](assets/seedance-package-output-template.md)
+- [seedance-segment-template.md](references/seedance-segment-template.md) — v2.0 运镜增强版段落模板
+- [seedance-package-output-template.md](references/seedance-package-output-template.md) — v2.0 运镜增强版输出包模板
 
 For human-readable intermediate outputs, also use:
 
