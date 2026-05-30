@@ -55,19 +55,17 @@ The id should reflect the actual planned duration, not an arbitrary fixed 15-sec
 
 ## 4. Seedance execution prompts
 
+Every Seedance prompt must be compiled strictly using the standard template in [prompt-compilation-playbook.md](prompt-compilation-playbook.md) and adhere to the 8 industrial prompting rules. 
+
 Each prompt should include at least:
 
-- time range
-- bound assets
-- shot purpose
-- shot size
-- camera angle
-- camera movement
-- action sequence
-- physical feedback
-- light / atmosphere changes
-- emotion changes
-- sound / ambience
+- **Segment ID & Time**: Chronologically tracked and precise (e.g. `SEG01_0-12s`).
+- **Duties and Safe Zones**: Head and tail safe zones (at least 1.5s each) locked with stable micro-motions.
+- **Continuity Anchors**: Explicit binding of approved assets (`@角色`, `@场景`, `@道具`) and lighting direction.
+- **Physical Camera motion**: Concrete speed, height, trajectory, and camera type (mechanical/handheld).
+- **Space-and-Material VFX**: Effects physically bound to space and reflectivity, avoiding floating descriptions.
+- **Performance-based Emotion**: Dramatic lights/shadows, neck posture, chest breathing, and eye direction instead of simple adjectives.
+- **The Change Chain**: The causal action loop (subject action -> camera path -> environment reaction -> recovery).
 
 ## 5. Transition notes
 
@@ -121,9 +119,9 @@ Recommended approach:
 
 ## Constraint rules
 
-- Seedance prompts must inherit the locked script and approved assets
-- do not write prompts before asset references exist
-- do not add unapproved character / scene inventions casually
-- keep action density realistic for the allotted time
-- preserve head/tail safe zones where necessary
-- every segment should include enough continuity guidance to avoid character, style, scene, or spatial drift
+- **Strict Playbook Enforcement**: Every prompt must pass a sanity check against the 8 industrial prompting rules in [prompt-compilation-playbook.md](prompt-compilation-playbook.md).
+- **Inheritance & Binding**: Seedance prompts must strictly inherit the locked script and approved assets; do not write prompts before `@` asset references exist.
+- **No Random Inventions**: Do not add unapproved character features, costumes, or scene attributes casually.
+- **Action Density**: Keep action density physically realistic for the allotted segment duration.
+- **Safe Zone Handles**: Ensure the head and tail 1.5 seconds have clear, stable holding instructions to support clean transitions and avoid warp artifacts.
+- **Continuity Guidance**: Every segment must specify spatial and lighting boundaries to avoid character, style, scene, or spatial drift.

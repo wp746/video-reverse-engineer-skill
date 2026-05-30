@@ -84,6 +84,7 @@ Read:
 - [producer-handoff.md](references/producer-handoff.md) for post-review producer breakdown and downstream package planning
 - [seedance-package-spec.md](references/seedance-package-spec.md) for Seedance output structure
 - [video-input-ingestion.md](references/video-input-ingestion.md) for multi-platform link ingestion
+- [prompt-compilation-playbook.md](references/prompt-compilation-playbook.md) for compiling high-quality prompts based on 8 industrial rules
 - [review-prompts/](references/review-prompts/) for hidden expert-review prompts, starting with chief director and screenwriter
 
 ## Stage 1: Reverse engineering
@@ -226,14 +227,16 @@ Each shot should include:
 
 ## Stage 8: Seedance 2.0 package
 
-Generate a package, not a single loose paragraph.
+Generate a package, not a single loose paragraph. 
+
+Every generated prompt in this package must strictly comply with the **8 industrial prompting rules** detailed in [prompt-compilation-playbook.md](references/prompt-compilation-playbook.md). Do not output plain visual descriptions without clear shot duties, precise physical camera movement, space-and-material-anchored VFX, performance-based emotion, and head/tail safe zones.
 
 The default package should include:
 
 - master control prompt
 - asset reference table with `@` mappings
 - shot timeline table
-- shot-level or segment-level Seedance prompts
+- shot-level or segment-level Seedance prompts compiled using the playbook template
 - transition notes
 
 Useful starter templates live in:
