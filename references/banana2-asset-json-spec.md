@@ -11,30 +11,42 @@ Do not output loose asset prose only. Output a stable JSON package that:
 - captures enough specificity for Banana 2 image generation
 - can be reused by later production steps
 - enforces a strict, fixed layout and style based on the **GlitterPixely professional layout methodology** to prevent visual drift.
+- enforces a strict **Labeling & Reminder separation protocol** to enable precise downstream referencing.
 
 ---
 
-## 2. GlitterPixely Standard Layout Guidelines (好莱坞排版设计标准)
+## 2. GlitterPixely Standard Layout & Labeling Guidelines (好莱坞排版与标注设计标准)
 
-To ensure absolute layout and style consistency across image2 generated images, every asset sheet and storyboard prompt must adhere to these fixed visual formulas:
+To ensure absolute layout and style consistency across image2 generated images, every asset sheet and storyboard prompt must adhere to these fixed visual and text-rendering formulas:
 
-### A. Character Model Sheet Layout (角色资产板排版)
-To lock character features, clothing, and proportions, the prompt must enforce an **orthographic, flat-lit turnaround sheet**:
+### A. Character Model Sheet Layout & Labeling (资产板排版与文字标注)
+To lock character features, clothing, and proportions, the prompt must enforce an **orthographic, flat-lit turnaround sheet with rendered text labels**:
 - **Fixed Style Keywords**: `character model sheet, character design sheet, turnaround, multiple angles, front view, side view, back view, expressions sheet, orthographic technical illustration, clean flat lighting, solid light grey background, concept art, high consistency --ar 16:9`
-- **Avoid**: Floating perspectives, dynamic shadows, busy environments, or anime-style rendering (unless anime is the target medium).
+- **Top Subtitle Label (英文字幕标签)**: Must instruct image2 to render a clean white text label saying `"A01"` (or `"A02"`, `"A03"`, etc. corresponding to the asset number) at the top center of the sheet.
+- **Sub-Image Labels (小图底部标注)**: Must instruct image2 to render small, clean white text labels saying `"front view"`, `"side view"`, `"back view"`, and `"face closeup"` directly underneath each corresponding turnaround view.
 - **Default Prompt Structure**:
-  `[Bilingual Prompts]: Character model sheet of [Character Details], turnaround showing front view, side view, back view, expression sheet, detailed technical illustration, solid light-grey background --ar 16:9`
+  `Character model sheet of [Character Details], turnaround showing front view, side view, back view, expressions sheet, detailed technical illustration, solid light-grey background. The text label "A01" is written as clean white text at the top center of the sheet. Small, clean white text labels saying "front view", "side view", "back view", and "face closeup" are rendered directly underneath each corresponding view --ar 16:9`
 
-### B. Cinematic Storyboard Panel Layout (故事板单帧排版)
+### B. Cinematic Storyboard Panel Layout & Labeling (故事板单帧排版与文字标注)
 To lock the cinematic staging, framing, camera angle, and composition, the prompt must enforce an **annotated, high-fidelity film panel**:
 - **Fixed Style Keywords**: `cinematic storyboard panel, shot progression panel, clean film sketch, detailed line art, technical camera annotation, focal length 35mm, shot composition, film strip style, industrial concept art --ar 16:9`
+- **Top Subtitle Label (英文字幕标签)**: Must instruct image2 to render a clean white text label saying `"S01"` (or `"S02"`, `"S03"`, etc. corresponding to the storyboard number) at the top center of the panel.
 - **Technical Annotations**: Must declare exact camera parameters (e.g. `Shot Type: Medium Close-Up`, `Focal Length: 35mm`, `Aspect Ratio: 16:9`) inside the prompt to force the model to render authentic lens characteristics.
 - **Default Prompt Structure**:
-  `[Bilingual Prompts]: Cinematic storyboard panel of [Scene Description], detailed line art, film strip style, technical camera annotation, shot composition --ar 16:9`
+  `Cinematic storyboard panel of [Scene Description], detailed line art, film strip style, technical camera annotation, shot composition. The text label "S01" is written as clean white text at the top center of the panel --ar 16:9`
 
 ---
 
-## 3. Top-Level Package
+## 3. Bilingual Prompt & Reminder Separation Protocol (中英文分离与提示规则)
+
+1. **Strict Language Separation**: Deliver prompts in separate, clearly marked blocks (`【英文提示词】` and `【中文提示词】`). Never mix languages in a single prompt body.
+2. **User Reference Reminders (💡 后端引用提示)**:
+   - Provide clear, actionable instructions explaining which assets need to be loaded as references in seedance2.0 (e.g. telling the user to generate `A01` and `S01` in image2, and then reference `A01.png/front view` and `S01.png` in Seedance).
+   - **MUST NOT** include these reminder notes inside the prompt body itself, ensuring the generator receives only clean visual descriptors.
+
+---
+
+## 4. Top-Level Package
 
 Use this top-level JSON structure:
 
@@ -60,7 +72,7 @@ Use this top-level JSON structure:
 
 ---
 
-## 4. Character Asset JSON
+## 5. Character Asset JSON
 
 Each major character should be packaged like this:
 
@@ -101,17 +113,10 @@ Each major character should be packaged like this:
     "accessories": []
   },
   "banana2_prompt_package": {
-    "system_intent": "Generate a single 16:9 cinematic character asset sheet conforming to the GlitterPixely turnaround standard.",
+    "system_intent": "Generate a single 16:9 character sheet conforming to the GlitterPixely turnaround standard and containing rendered labels.",
     "generation_prompt": "string",
     "chinese_prompt": "string",
     "consistency_notes": ["string"]
   }
 }
 ```
-
----
-
-## 5. Scene & Storyboard Handover Rules
-
-- Always provide **bilingual prompts (English + Chinese)** for every character, scene, prop, and storyboard panel.
-- Ensure the storyboard prompts strictly contain the technical camera annotations and film strip styling to ensure they match the GlitterPixely layout standard.
