@@ -23,6 +23,9 @@ Every static asset prompt compiled for **image2** must strictly utilize the **Ca
 >
 > **Aspect Ratio Rule**:
 > Every prompt must start with `"Create a clean 16:9 landscape..."` and must **NOT** contain the trailing `--ar 16:9` tag. The user will select the aspect ratio manually in the generator.
+>
+> **Label Language Pureness Rule (标签语言纯净性协议)**:
+> In the Chinese prompt, all labels, headers, and annotation texts to be rendered on the image (e.g., titles, sub-labels, and explanations) must be strictly in CHINESE. In the English prompt, they must be strictly in ENGLISH. Mixed-language label rendering (e.g., rendering English labels inside a Chinese prompt) is strictly prohibited.
 
 ### A. 🧑 角色设计板 (Character Design Sheet) Layout Standard
 * **Category Prompts Layout Template**:
