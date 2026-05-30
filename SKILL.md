@@ -33,12 +33,12 @@ The default execution sequence is:
 
 Ensure you read and strictly enforce the following documents:
 - [prototype-reconstruction-framework.md](references/prototype-reconstruction-framework.md) for the 10-layer standard, style-switching, and theme-shifting rules.
-- [backend-handover-protocol.md](references/backend-handover-protocol.md) for image2 JSON formats, GlitterPixely specs, separate language blocks, top labels, and user reference reminders.
+- [backend-handover-protocol.md](references/backend-handover-protocol.md) for image2 prompt structures, GlitterPixely specs, separate language blocks, top labels, and user reference reminders.
 - [prompt-compilation-playbook.md](references/prompt-compilation-playbook.md) for the 8 core video prompting rules (Clear duties, Continuity first, Physical camera, Space VFX, Performance emotion, Change chains, Safe zones, and Static/Dynamic separation).
 - [seedance-package-spec.md](references/seedance-package-spec.md) for the timeline table, 15s budgeting, and All-Round Reference binding rules.
-- [banana2-asset-json-spec.md](references/banana2-asset-json-spec.md) for Google Banana 2 JSON formatting and GlitterPixely keyword standards.
 - [cinematography-design-guide.md](references/cinematography-design-guide.md) for 38-type camera techniques, SEG mapping matrix, and mirror symmetry principles.
 - [seedance-prompt-craft-notes.md](references/seedance-prompt-craft-notes.md) for 36 camera terminology writing rules and English prompt examples.
+
 
 ---
 

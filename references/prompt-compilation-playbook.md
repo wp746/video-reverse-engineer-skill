@@ -1,6 +1,6 @@
 # Prompt Compilation Playbook
 
-Use this reference when compiling video-generation prompts for **Seedance 2.0** or **Kling** after assets are locked and the storyboard is structured.
+Use this reference when compiling video-generation prompts for **Seedance 2.0** or other video generators after assets are locked and the storyboard is structured.
 
 ---
 
@@ -8,13 +8,13 @@ Use this reference when compiling video-generation prompts for **Seedance 2.0** 
 
 Premium AI video prompts are not defined by chaotic adjective piles or length. They are defined by **precision, physical logic, and structural boundaries**. 
 
-Always separate static consistency (handled by [Banana 2 Asset Pack](banana2-asset-json-spec.md)) from dynamic motion (handled by the video prompt).
+Always separate static consistency (handled by image2 asset sheets) from dynamic motion (handled by the video prompt).
 
 ---
 
 ## The 8 Industrial Prompting Rules
 
-### Rule 1: Clear Shot Duties (镜头职责清晰)
+### Rule 1: Shot Duties (镜头职责清晰)
 Every prompt must slice time and allocate clear narrative or visual tasks to specific seconds. Do not let the model guess the pacing.
 - **Vague**: "A character walks in a busy street and then looks back in shock."
 - **Industrial**: 
@@ -59,7 +59,7 @@ Never pack high-velocity actions or transitions into the first or last 1.5 secon
 - `8.5-10s`: Transition into a stable hold to allow downstream video cross-dissolves or cuts.
 
 ### Rule 8: Strict Separation of Static and Dynamic (动静分工)
-Do not re-describe a character's nose shape, height, or coat buttons in the video prompt if they are already defined in the character sheet JSON. Wasting tokens on static parameters increases model drift. Keep the video prompt focused purely on **the delta of change**.
+Do not re-describe a character's nose shape, height, or coat buttons in the video prompt if they are already defined in the character sheet. Wasting tokens on static parameters increases model drift. Keep the video prompt focused purely on **the delta of change**.
 
 ---
 
