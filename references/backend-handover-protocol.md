@@ -15,96 +15,103 @@ Use this reference during **Stage 5 (Producer Asset Breakdown)** and **Stage 8 (
 
 ## 2. image2 Structured Prompt Layout Standards (GlitterPixely Standard)
 
-Every static asset prompt compiled for **image2** must strictly utilize the **Category-Based Segmented Structure (分类结构化排版)** to lock down the exact layout, character/scene details, style, consistency anchors, color palette, and negative parameters:
+Every static asset prompt compiled for **image2** must strictly utilize the **Category-Based Segmented Structure (分类结构化排版)** to lock down the exact layout, character/scene details, style, consistency anchors, color palette, and negative parameters. 
+
+> [!IMPORTANT]
+> **Aesthetic Constraint - Strict Cinematic Photorealism**:
+> All assets must be defined under **极致电影写实风格 (Cinematic Photorealism)**. Absolutely no cartoon, Q-version, 3D doll, art toy, collectible, sculpture, or stylized plastic shaders are allowed. Use high-fidelity tactile textures: `35mm cinematic film grain` (35毫米胶片颗粒感), `sweat-glistening skin pores` (汗水折射与微细毛孔), `coarse heavy cotton textures` (粗砺厚棉工装纤维), `coarse sand aggregate concrete textures` (带砂砾的混凝土粗糙粗糙度), `weathered metal with oil stains` (带油污的磨损金属), and realistic optical camera rendering.
+>
+> **Aspect Ratio Rule**:
+> Every prompt must start with `"Create a clean 16:9 landscape..."` and must **NOT** contain the trailing `--ar 16:9` tag. The user will select the aspect ratio manually in the generator.
 
 ### A. 🧑 角色设计板 (Character Design Sheet) Layout Standard
-* **Aspect Ratio**: Always `16:9` (`--ar 16:9`).
 * **Category Prompts Layout Template**:
   ```text
-  【大标题渲染指示 (Major Label Indicator)】: Major title "[A0X]" written in clean white Helvetica Bold font of 48pt centered at the top center of the canvas.
+  Create a clean 16:9 landscape character reference sheet.
+  Major title "[A0X]" written in clean white Helvetica Bold font of 48pt centered at the top center of the canvas.
   
-  【布局 (Layout)】: 
-  - Left: large full-body front view of the character in a neutral standing stance.
-  - Top-Right: face closeup, neutral expression.
-  - Turnaround views: left profile view showing character from left, 3/4 body view showing character at angle, right profile view showing character from right, back view showing back details.
+  【Layout】: 
+  - Left (55% width): large full-body front view of the character in a neutral standing stance, standing on a solid neutral light-grey background.
+  - Top-Right (20% width): face closeup, neutral expression.
+  - Turnaround views & Details (25% width): left profile view showing character from left, 3/4 body view showing character at angle, right profile view showing character from right, back view showing back details.
   - A small facial expression strip containing five small boxes showing neutral, happy, angry, surprised, and sad expressions.
-  - An interactive callout detail section showing closeups of gear or special abilities.
+  - An interactive callout detail section showing closeups of gear, textures, or materials.
   - A bottom color palette bar showing solid color swatches.
   - A brief consistency note at the bottom.
   - Small, clean white sub-labels saying "front view", "side view", "back view", "face closeup", "expression strip", and "detail callout" in Arial Regular font of 12pt rendered directly centered under each corresponding view.
   
-  【角色 (Character)】: [Vivid visual identity cues, features, clothing textures, skin tone, hair color, and expression]
+  【Character】: [Vivid visual identity cues, realistic skin textures, micro-sweat pores, coarse fabric clothing, and expressions matching Cinematic Photorealism]
   
-  【动作与交互标注 (Detail Callouts)】: [Magical runes, floating particles, holding props, or clothing textures]
+  【Detail Callouts】: [Realistic texture closeups, hands lifting concrete, paper fibers, tools]
   
-  【风格 (Style)】: Clean production character sheet style, high-quality stylized 3D doll / handcrafted art toy appearance, soft fabric textures, readable layout, soft even studio lighting, pure warm neutral background.
+  【Style】: Cinematic photorealism, 35mm film color grading, subtle film grain, natural depth of field, raw human skin texture with pores, coarse fabric weaves, realistic shadows, soft natural window light, pure warm neutral light-grey background.
   
-  【保持一致 (Keep Consistent)】: [Explicit turnaround anchors to prevent drifting across panels]
+  【Keep Consistent】: [Explicit turnaround anchors to prevent drifting across panels]
   
-  【颜色调色板条 (Color Palette)】: [Specific hexadecimal or naming color swatches]
+  【Color Palette】: [Specific hexadecimal or naming color swatches]
   
-  【简短的一致性说明 (Brief Consistency Note)】: [Consistency rules]
+  【Brief Consistency Note】: [Consistency rules]
   
-  【禁止 (Negative/Don'ts)】: [Strict negative bounds]
+  【Don'ts】: [Strict negative bounds: do not make it look like a 3D doll or plastic art toy, do not use stylized cartoon shaders]
   ```
 
 ### B. 🏫 场景设计板 (Scene Design Sheet) Layout Standard
-* **Aspect Ratio**: Always `16:9` (`--ar 16:9`).
 * **Category Prompts Layout Template**:
   ```text
-  【大标题渲染指示】: Major title "[A0X]" written in clean white Arial Bold font of 48pt centered at the top center of the canvas.
+  Create a clean 16:9 landscape environment concept design sheet.
+  Major title "[A0X]" written in clean white Arial Bold font of 48pt centered at the top center of the canvas.
   
-  【布局 (Layout)】: 
+  【Layout】: 
   - A mathematically equal 3x3 nine-box grid layout with 1% solid grid borders.
-  - cell-01: wide establishing view (全景建立镜).
-  - cell-02: motivated lighting source view (主光源光影).
-  - cell-03: character interaction zone view (局部交互).
-  - cell-04: environment texture & material view (材质肌理).
-  - cell-05: narrative prop environment view (道具微观环境).
-  - cell-06: atmospheric particle/VFX view (特效氛围).
-  - cell-07: low angle perspective view (低角度仰视).
-  - cell-08: high angle view (高角度俯视).
-  - cell-09: depth of field focus transition closeup (虚实对比特写).
+  - cell-01 (32% width): wide establishing view (全景建立镜).
+  - cell-02 (32% width): motivated lighting source view (主光源光影).
+  - cell-03 (32% width): character interaction zone view (局部区域).
+  - cell-04 (32% width): environment texture & material view (材质肌理).
+  - cell-05 (32% width): narrative prop environment view (道具微观环境).
+  - cell-06 (32% width): atmospheric particle/VFX view (空气粉尘/微粒).
+  - cell-07 (32% width): low angle perspective view (低角度仰视).
+  - cell-08 (32% width): high angle view (高角度俯视).
+  - cell-09 (32% width): depth of field focus transition closeup (虚实对比特写).
   - Small, clean white sub-labels saying "cell-01" to "cell-09" in Arial Regular font of 12pt rendered centered directly under each cell.
   
-  【场景 (Scene Details)】: [Detailed environment descriptions for each of the 9 cells]
+  【Scene Details】: [Detailed realistic environment descriptions for each of the 9 cells, referencing sand aggregate, weathered wood, metal oxidation, volumetric dust]
   
-  【风格 (Style)】: [Cinematic lighting, render engine parameters, and background style]
+  【Style】: Cinematic photorealism, natural atmospheric perspective, 35mm cinematic lens, realistic environmental lighting (golden sunset / harsh cool fluorescent), warm neutral grey grid board.
   
-  【保持一致 (Keep Consistent)】: [Lighting, color palette, and time-of-day anchors]
+  【Keep Consistent】: [Lighting, color palette, and time-of-day anchors]
   
-  【颜色调色板条 (Color Palette)】: [Scene base color swatches]
+  【Color Palette】: [Scene base color swatches]
   
-  【简短的一致性说明 (Brief Consistency Note)】: [Grid coherence rules]
+  【Brief Consistency Note】: [Grid coherence rules]
   
-  【禁止 (Negative/Don'ts)】: [Strict negative bounds]
+  【Don'ts】: [No characters, no stylized shaders, no cartoon textures]
   ```
 
 ### C. 🚀 道具设计板 (Prop Design Sheet) Layout Standard
-* **Aspect Ratio**: Always `16:9` (`--ar 16:9`).
 * **Category Prompts Layout Template**:
   ```text
-  【大标题渲染指示】: Major title "[A0X]" written in clean white Arial Bold font of 48pt centered at the top center of the canvas.
+  Create a clean 16:9 landscape prop design sheet.
+  Major title "[A0X]" written in clean white Arial Bold font of 48pt centered at the top center of the canvas.
   
-  【布局 (Layout)】: 
+  【Layout】: 
   - A mathematically equal 2x2 quadrant layout with 1% solid grid lines.
-  - Quadrant 1 (Top-Left): isometric view (等角轴侧图).
-  - Quadrant 2 (Top-Right): exploded/crease structure (结构剖析/折痕蓝图).
-  - Quadrant 3 (Bottom-Left): material & wear closeup (材质特写与磨损细节).
-  - Quadrant 4 (Bottom-Right): scale reference (比例与大小对照).
+  - Quadrant 1 (49% width): isometric view (等角轴侧图).
+  - Quadrant 2 (49% width): exploded/crease structure (结构剖析/折痕蓝图).
+  - Quadrant 3 (49% width): material & wear closeup (材质特写与水泥粗砂/纸浆磨损细节).
+  - Quadrant 4 (49% width): scale reference (人手托举比例与大小对照).
   - Small, clean white sub-labels saying "isometric view", "exploded structure", "material texture", and "scale reference" in Arial Regular font of 12pt rendered directly centered under each quadrant.
   
-  【道具 (Prop Details)】: [Detailed visual descriptions of the prop dimensions, materials, and textures]
+  【Prop Details】: [Detailed visual descriptions of the prop dimensions, materials, and concrete/paper textures]
   
-  【风格 (Style)】: [Industrial art toy model, clear collectible aesthetic]
+  【Style】: Cinematic photorealism, high-fidelity industrial detail, photographic lighting, warm neutral light-grey background.
   
-  【保持一致 (Keep Consistent)】: [Scale, texture, and wear consistency anchors]
+  【Keep Consistent】: [Scale, texture, and wear consistency anchors]
   
-  【颜色调色板条 (Color Palette)】: [Prop color swatches]
+  【Color Palette】: [Prop color swatches]
   
-  【简短的一致性说明 (Brief Consistency Note)】: [Consistency rules]
+  【Brief Consistency Note】: [Consistency rules]
   
-  【禁止 (Negative/Don'ts)】: [Strict negative bounds]
+  【Don'ts】: [No cartoon textures, no glossy plastic shaders, no stylized game icons]
   ```
 
 ---
@@ -113,31 +120,31 @@ Every static asset prompt compiled for **image2** must strictly utilize the **Ca
 
 Every storyboard panel (S01-S06) generated by image2 must adopt the asymmetrical split film strip layout and categoric prompt formatting:
 
-* **Aspect Ratio**: Always `16:9` (`--ar 16:9`).
 * **Category Prompts Layout Template**:
   ```text
-  【大标题渲染指示】: Major title "[S0X]" written in clean white Helvetica Bold font of 48pt centered at the top center of the canvas.
+  Create a clean 16:9 landscape cinematic storyboard layout panel.
+  Major title "[S0X]" written in clean white Helvetica Bold font of 48pt centered at the top center of the canvas.
   
-  【布局 (Layout)】: 
+  【Layout】: 
   - Enclosed in a dark-grey cinematic film strip border with sprocket holes.
   - Left 65% width: Main Shot Frame (主画面镜幅) showing primary composition and actions.
   - Right 30% width: Insert Closeup Frame (特写插图镜幅) showing motivated detail closeups.
   - Center 5% width: solid black dividing strip.
   - Small, clean white sub-labels saying "main shot" and "insert closeup" in Helvetica Regular font of 12pt rendered directly centered under each frame.
   
-  【分镜镜头与剧情 (Composition & Action)】: [Detailed left 65% frame layout, characters, action, and right 30% closeup details]
+  【Composition & Action】: [Detailed left 65% frame layout, characters, action, and right 30% closeup details, written under Cinematic Photorealism]
   
-  【风格 (Style)】: Clean cinematic sketch, high-fidelity lines, technical camera annotations, realistic camera mapping.
+  【Style】: Cinematic photorealism, 35mm film grain, anamorphic lens flares, technical camera annotations, realistic camera mapping, strong contrast between golden sunset warmth and cool fluorescent industrial shadow.
   
-  【声光标注位 (Seedance Read Interface)】: [Motivated lighting direction, shadow boundaries, and sound wave/acoustic cues]
+  【Seedance Read Interface】: [Motivated lighting direction, shadow boundaries, and sound wave/acoustic cues]
   
-  【简短的一致性说明 (Brief Consistency Note)】: [Coherence rules]
+  【Brief Consistency Note】: [Coherence rules to match A01/A02 characters and A03/A04 scenes]
   
-  【禁止 (Negative/Don'ts)】: [Strict negative bounds]
+  【Don'ts】: [No split screen merge, no cartoon expressions, no hand-drawn sketches, must look like realistic film frames]
   ```
 
 ---
 
 ## 4. Downstream seedance2.0 Reading Interface (后期 Seedance 读取接口)
 
-To guarantee that **seedance2.0**'s **All-Round Reference (全能参考)** correctly parses the structured output, Seedance binds the left 65% area (`main shot`) of the storyboard sheet to anchor the camera framing and binds the right 30% area (`insert closeup`) to drive local dynamic morphing. Maintain **15-second budget segments** with **1.5s safety zones** at the head and tail.
+To guarantee that **seedance2.0**'s **All-Round Reference (全能参考)** correctly parses the structured output, Seedance binds the left 65% area (`main shot`) of the storyboard sheet to anchor the camera framing and binds the right 30% area (`insert closeup`) to drive local dynamic morphing. Maintain **15-second budget segments** with **1.5s safety zones** at the head and tail. All reminders about which assets to bind must be placed **outside** the copy-pasteable prompt blocks in dedicated reminder callout boxes.

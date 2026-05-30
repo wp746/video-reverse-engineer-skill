@@ -44,12 +44,21 @@ Ensure you read and strictly enforce the following documents:
 
 ## 4. Stages of Production
 
-### Stage 1 & 2: Internal Deconstruction & Migration
+### Stage 1: Upload & 10-Layer Prototype Deconstruction
 - Perform the 10-layer deconstruction internally across plot, character, style, prop, dialogue, composition, camera, VFX, SFX, and pacing.
-- Perform the style-switching (animation to photorealism) and theme migration internally based on the user's requirements.
+
+### Stage 1.5: User Remake Preference Gate (前置需求询问闸门)
+- **CRITICAL GATE**: Promptly stop the workflow to present the user with explicit deconstruction and remake preference choices:
+  - *A. Style Switching Direction*: e.g. strict Cinematic Photorealism vs Q-version art toy.
+  - *B. Focus Areas of Remake*: e.g. exact plot replication, dialogue shifting, style transfer, or scene migration.
+  - *C. Aspect Ratio & Outputs*: Confirm target aspect ratios and backend engines.
+- Wait for user feedback and confirmation before compiling the script or assets.
+
+### Stage 2: Target Style & Theme Migration
+- Re-couple realistic textures, camera limitations, and theme container shifts strictly according to the confirmed user gate selections.
 
 ### Stage 3 & 4: Script & Review Lock
-- Draft the reconstructed script structure and execute the expert reviews internally to ensure the score is `>= 90` and AI feasibility passes.
+- Draft the reconstructed script structure and execute the expert reviews internally to ensure the score is `>= 90`.
 
 ### Stage 5: Producer Breakdown
 - Extract characters, scenes, and props, and plan the timeline segment divisions strictly utilizing the <=15-second budget.
