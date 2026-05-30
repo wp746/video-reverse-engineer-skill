@@ -74,6 +74,8 @@ Ensure you read and strictly enforce the following documents:
 - [producer-handoff.md](references/producer-handoff.md) for the producer's handover package structure.
 - [prompt-compilation-playbook.md](references/prompt-compilation-playbook.md) for the 8 core video prompting rules (Clear duties, Continuity first, Physical camera, Space VFX, Performance emotion, Change chains, Safe zones, and Static/Dynamic separation).
 - [seedance-package-spec.md](references/seedance-package-spec.md) for the timeline table and segment prompt structure.
+- [cinematography-design-guide.md](references/cinematography-design-guide.md) for 38-type camera techniques, SEG mapping matrix, and mirror symmetry principles.
+- [seedance-prompt-craft-notes.md](references/seedance-prompt-craft-notes.md) for 36 camera terminology writing rules and English prompt examples.
 
 ---
 

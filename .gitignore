@@ -1,2 +1,27 @@
+# OS
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# Temp / cache
+*.tmp
+*.bak
+*.log
+.cache/
+
+# Generated outputs (user's production files, not skill content)
+!samples/**/generated/
