@@ -1,6 +1,6 @@
 # Backend Handover Protocol (image2 + seedance2.0)
 
-Use this reference during **Stage 5 (Producer Breakdown)** and **Stage 8 (Seedance Prompt Compilation)** to prepare the final deliverable for the production backend.
+Use this reference during **Stage 5 (Producer Asset Breakdown)** and **Stage 8 (Seedance Prompt Compilation)** to prepare the final deliverable for the production backend.
 
 ---
 
@@ -13,76 +13,111 @@ Use this reference during **Stage 5 (Producer Breakdown)** and **Stage 8 (Seedan
 
 ---
 
-## 2. image2 Bilingual Asset Handover Protocol (GlitterPixely Standard)
+## 2. image2 Mathematically Fixed Layout Standards (GlitterPixely Standard)
 
-Every static asset (characters, scenes, props) and storyboard frame in the `.md` deliverable must include separate, cleanly blocked **Bilingual Prompts (English for maximum model fidelity + Chinese for user tweaking)** and adhere strictly to the **GlitterPixely Labeling Standard**:
+Every static asset (characters, scenes, props) and storyboard frame in the `.md` deliverable must include separate, cleanly blocked **Bilingual Prompts (English for maximum model fidelity + Chinese for user tweaking)** and adhere strictly to the following **mathematically fixed layout grids and typography standards**:
 
-### A. Strict Separation of Language Blocks
-Do not mix Chinese and English inside the same prompt body. Deliver them in separate, labeled markdown code blocks or text blocks so the user can copy them independently.
+### A. 🧑 角色设计板 (Character Design Sheet) Layout Standard
+- **Canvas Aspect Ratio**: Always `16:9` (`--ar 16:9`).
+- **Canvas Partitioning & Area Proportions (区域占比)**:
+  - **Left 55% of the canvas width**: Reserved for the **Full-Body Turnaround (全身正交三视图/四视图)**. Figures (e.g. `front view` [正面], `side view` [侧面], `back view` [背面] - and optional `3/4 view` [四分之三斜侧面]) stand side-by-side on a clean, solid neutral light-grey background. Each figure occupies 100% of the canvas height.
+  - **Middle-Right 20% of the canvas width**: Reserved for the **Face Closeups (面部特写与表情包)**. Shows two distinct expressions (e.g., hopeful and exhausted) arranged vertically. Each closeup occupies 20% width by 48% height.
+  - **Rightmost 25% of the canvas width**: Reserved for the **Costume & Fabric Details (服饰材质与道具部件细节)**. Divided vertically into three equal squares (each 25% width by 32% height), showing closeups of upper body costume, lower body/footwear, and handheld tools.
+- **Typography & Font Standards (字体与字号)**:
+  - **Top Centered Major Title (顶部大标题)**: `A01`, `A02`, etc., written in clean bold uppercase.
+    - **English version**: **Helvetica Bold** or **Arial Bold** (48pt, solid white, centered).
+    - **Chinese version**: **思源黑体 Bold (Source Han Sans Bold)** or **微软雅黑 Bold** (48pt, solid white, centered).
+  - **Sub-View Underneath Labels (小图底部子标签)**:
+    - **English labels** (`front view`, `side view`, `back view`, `face closeup`, `costume detail`): **Arial Regular** or **Inter** (12pt, all lowercase, clean white, centered directly under each corresponding figure/grid cell).
+    - **Chinese labels** (`正面视图`, `侧面视图`, `背面视图`, `面部特写`, `服饰细节`): **思源黑体 Regular** or **黑体** (12pt, pure white, centered directly under).
 
-### B. Top Subtitle Labels (英文字幕标签)
-Instruct the image2 model to render a clean, high-contrast text label at the very top of the generated image:
-- **For Assets**: Label as `A01`, `A02`, `A03`, etc.
-- **For Storyboards**: Label as `S01`, `S02`, `S03`, etc.
-- **Prompting Keyword**: `"[LABEL] written as clean white text at the top center of the image"` or `"[LABEL] captioned at the top of the sheet"`.
+### B. 🏫 场景设计板 (Scene Design Sheet) Layout Standard
+- **Canvas Aspect Ratio**: Always `16:9` (`--ar 16:9`).
+- **Canvas Partitioning & Area Proportions (区域占比)**:
+  - **3x3 Nine-Box Grid Layout (3x3九宫格细节概念板)**.
+  - Divided into 9 mathematically equal cells arranged in 3 rows and 3 columns.
+  - Each cell is exactly **32% width by 32% height**, with exactly **1% grid borders/lines (网格线)** separating them.
+  - **Grid Viewpoint Assignment (从 cell-01 到 cell-09)**:
+    * `cell-01`: `wide establishing view` (全景建立镜).
+    * `cell-02`: `motivated lighting source view` (主光源与光影细节).
+    * `cell-03`: `character interaction zone view` (人物交互区域特写).
+    * `cell-04`: `environment texture & material view` (环境材质与肌理细节).
+    * `cell-05`: `narrative prop environment view` (核心道具所处微观环境).
+    * `cell-06`: `atmospheric particle/VFX view` (空气粒子与特效氛围).
+    * `cell-07`: `low angle perspective view` (低角度仰视纵深).
+    * `cell-08`: `high angle perspective view` (高角度俯视格局).
+    * `cell-09`: `depth of field focus transition view` (大景深虚实对比镜).
+- **Typography & Font Standards (字体与字号)**:
+  - **Top Centered Major Title (顶部大标题)**: `A03`, `A04`, etc.
+    - **English version**: **Arial Bold** (48pt, solid white, centered).
+    - **Chinese version**: **思源黑体 Bold** (48pt, solid white, centered).
+  - **Sub-View Underneath Labels (小图底部子标签)**:
+    - Centered directly under each cell: `cell-01` to `cell-09`.
+    - **English version**: **Arial Regular** (12pt, all lowercase, clean white).
 
-### C. Sub-Image Labels Underneath (小图底下的标签)
-Within multi-panel sheets (like character turnaround sheets or scene 9-box grids), instruct image2 to render clean text labels directly underneath each sub-view. This allows precise referencing in downstream video generation:
-- Under character turnaround views, render: `front view`, `side view`, `back view`, `face closeup`.
-- Under scene 9-box grid cells, render: `grid-01` to `grid-09` or descriptive viewpoint labels like `wide angle`, `lighting detail`, `surface texture closeup`.
-- **Prompting Keyword**: `"with small, clean white text labels saying '[SUB-LABEL]' rendered directly underneath each corresponding view"`.
-
-### D. User Reference Reminders (💡 资产绑定提示 - 绝不放进提示词)
-If an asset needs to reference another generated asset (e.g. a character needs to reference a scene or prop), or if seedance2.0 needs to reference specific generated assets or storyboard frames, write a **clear reminder/instruction box** for the user.
-- **CRITICAL RULE**: These reminders must be placed in a dedicated, clearly separated block (`💡 资产绑定提示` or `💡 后端引用说明`) and **MUST NOT be included inside the prompt body** itself, ensuring the copy-pasteable prompts remain 100% clean and free of metadata.
+### C. 🚀 道具设计板 (Prop Design Sheet) Layout Standard
+- **Canvas Aspect Ratio**: Always `16:9` (`--ar 16:9`).
+- **Canvas Partitioning & Area Proportions (区域占比)**:
+  - **4-Quadrant Split Layout (2x2四宫格板)**.
+  - Divided into 4 equal quadrants (each **49% width by 49% height**, with a **1% vertical/horizontal gutter**).
+  - Quadrant mapping:
+    * `Quadrant 1 (Top-Left)`: `isometric view` (三维等角轴侧视图).
+    * `Quadrant 2 (Top-Right)`: `exploded/crease blueprint` (结构剖析或折痕图).
+    * `Quadrant 3 (Bottom-Left)`: `material & wear closeup` (表面材质与使用磨损特写).
+    * `Quadrant 4 (Bottom-Right)`: `scale reference` (手持比例与大小对照).
+- **Typography & Font Standards (字体与字号)**:
+  - **Top Centered Major Title (顶部大标题)**: `A05`, `A06`, etc.
+    - **English version**: **Arial Bold** (48pt, solid white, centered).
+    - **Chinese version**: **思源黑体 Bold** (48pt, solid white, centered).
+  - **Sub-View Underneath Labels (小图底部子标签)**:
+    - **English version**: **Arial Regular** (12pt, all lowercase, clean white, centered under each quadrant).
+    - **Chinese version**: **思源黑体 Regular** (12pt, pure white, centered under each quadrant).
 
 ---
 
 ## 3. Storyboard Panel Design Standard (故事板标准)
 
-Every storyboard panel (S01-S09) generated by image2 must represent a pre-visualization (故事预演) of the shot segment, explicitly defining the following visual and audio parameters in the prompt and layout:
-1. **Storyboard Frame Pre-visualization (故事预演)**: Clearly describe the narrative context and character action.
-2. **Camera Movements & Angles (机位运动与运镜方式)**: Detail camera tracking, focal length, crane, handheld feel, and translation.
-3. **Visual Effects & Lighting (特效与光影)**: Specify material-anchored VFX (sparks, dust, rain) and key light sources.
-4. **Sound Effects (音效)**: Incorporate implied acoustic pacing, dynamic sound cues, and environment ambient SFX.
+Every storyboard panel (S01-S06) generated by image2 must represent a pre-visualization (故事预演) of the shot segment, explicitly locked in the following cinematic format:
+
+### A. Asymmetrical Split-Screen Film Strip (不对称双格胶片板)
+- **Canvas Aspect Ratio**: Always `16:9` (`--ar 16:9`).
+- **Film Border**: Enclosed in a dark-grey/black **cinematic film strip border with sprocket holes (带齿孔的黑色胶片边缘)**.
+- **Left 65% of the canvas width**: **Main Shot Frame (左侧主画面镜幅)**. Shows the primary narrative action, composition (e.g. golden ratio, rule of thirds).
+- **Right 30% of the canvas width**: **Insert Closeup Frame (右侧特写插图镜幅)**. Shows the key emotional micro-expression, hand action, or high-contrast prop detail.
+- **Center Gutter**: A **5% solid black dividing strip** separates the two frames.
+- **Typography & Font Standards (字体与字号)**:
+  - **Top Centered Major Title (顶部大标题)**: `S01`, `S02`, etc., written in clean bold uppercase.
+    - **English version**: **Helvetica Bold** (48pt, solid white, centered).
+    - **Chinese version**: **微软雅黑 Bold (Microsoft YaHei Bold)** (48pt, solid white, centered).
+  - **Sub-View Underneath Labels (小图底部子标签)**:
+    - `"main shot"` (under left) and `"insert closeup"` (under right) written in **Helvetica Regular** / **思源黑体 Regular** (12pt, clean white, centered below).
 
 ---
 
-## 4. seedance2.0 15-Second Segment Protocol
+## 4. Downstream seedance2.0 Reading Interface (后期 Seedance 读取接口)
 
-Since **seedance2.0** has a strict **maximum duration ceiling of 15 seconds per generation**, the timeline and prompts must be mathematically partitioned.
+To guarantee that **seedance2.0** correctly parses and translates the high-fidelity images generated by **image2**, every story segment timeline must implement the **All-Round Reference (全能参考) Reading Contract**:
 
-### The 15-Second Budgeting Rules
-1. **Strict 15s Partitioning**: Segment the timeline into blocks of at most 15 seconds (e.g., `0-15s`, `15-30s`, `30-45s`).
-2. **Scene Spanning (跨段衔接)**: If a single dramatic scene or setting takes longer than 15 seconds to resolve, split it across subsequent 15s segments (e.g. `SEG01_0-15s` and `SEG02_15-30s`).
-3. **Carry-Forward Continuity**: In spanned segments, explicitly carry forward the exact asset references (`@角色-001`, `@场景-001`) and the ending frame of the previous segment to maintain seamless visual stitching.
-4. **Action Pacing**: Ensure the action density described fits comfortably within the 15-second budget.
+1. **Spatial Alignment (空间对齐)**: Instruct Seedance to bind the left 65% area (`main shot`) of the storyboard sheet to anchor the camera framing, lighting direction, and spatial layout.
+2. **Micro-feature Morphing (细节流变)**: Instruct Seedance to bind the right 30% area (`insert closeup`) to drive the dynamic texture changes (e.g., paper bridge turning into stone, sweat drops running down face, mechanical sparks flying).
+3. **Physical Coordinates Reference**: The prompt explicitly instructs Seedance to map the relative positions of `@角色` and `@道具` based on their coordinates in `main shot` and `insert closeup`.
+4. **Strict 15s Budgeting**: Segment the timeline into blocks of at most 15 seconds (e.g. `0-15s`, `15-30s`), with a **1.5-second safety micro-motion zone** at the start and end of each segment to secure seamless stitching in post-production.
 
-### All-Round Reference (全能参考) Binding
-Instruct seedance2.0 to reference the exact assets and storyboards generated by image2 to lock pixel-perfect consistency (characters, scenes, prop styles, and camera pacing):
-
+### Timeline Mapping Template:
 ```text
 ================================================================================
-【分段编号】: SEG01_0-15s (15秒段落预算)
-【关联资产】: @角色-001, @场景-001, @故事板-01
+【分段编号】: SEG0X_0-15s (15秒段落预算)
+【关联资产】: @角色-00X, @场景-00X, @故事板-0X
 【全能参考指令】:
-  - 角色参考 (Character Ref): @角色-001.png (Image2 Character Sheet)
-  - 场景参考 (Scene Ref): @场景-001.png (Image2 Scene 9-Box Grid)
-  - 故事板参考 (Storyboard Ref): @故事板-01.png (Image2 Storyboard Panel)
+  - 空间与主画面参考 (Spatial Ref): 绑定 @故事板-0X.png 左侧 65% [main shot]
+  - 细节流变参考 (Micro-Detail Ref): 绑定 @故事板-0X.png 右侧 30% [insert closeup]
+  - 角色识别参考 (Character Ref): 绑定 @角色-00X.png [front view / face closeup]
+  - 场景氛围参考 (Scene Ref): 绑定 @场景-00X.png [cell-01 / cell-02]
 【安全区规划】: 
-  - 0-1.5s: Hold initial frame matching @故事板-01.png, stable micro-motion.
-  - 13.5-15.0s: Slow down motion, lock camera to allow clean stitching.
-【连续性锚点】: Light source direction, costume material, face identity.
+  - 0-1.5s: 锁定 @故事板-0X.png [main shot] 初始帧，微幅呼吸动，禁止大幅运镜。
+  - 13.5-15.0s: 镜头减速，锁定终点落幅，为下一分段拼接预留安全区。
+【连续性锚点】: 顶光光源、化纤服装材质、面部五官身份一致性。
 【出片提示词 (Seedance 2.0 Feeding Prompt)】:
 (Playbook-compliant, physical motion English prompt instructing the model to strictly reference the character sheet and storyboard image)
 ================================================================================
 ```
-
----
-
-## 5. Front-to-Back Handover Consistency Scan
-
-Before finalizing the `.md` package, perform an internal sanity check:
-1. **Bilingual Completeness**: Ensure every single asset and storyboard has separate English and Chinese prompts conforming to the GlitterPixely standard and labeling rules.
-2. **Label Verification**: Verify that the top labels (`A01/S01...`) and sub-image labels are correctly written inside the English and Chinese prompt bodies.
-3. **Reminders separation**: Confirm that all user reference instructions are kept strictly outside the prompt code blocks.
